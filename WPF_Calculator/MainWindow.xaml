@@ -1,0 +1,28 @@
+﻿<Window x:Class="WPF_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="textBox1" Text="0" FontSize="20" Grid.Row="0" Margin="10, 10, 500, 10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <TextBox x:Name="textBox2" Text="0" FontSize="20" Grid.Row="0" Margin="500, 10, 10, 10" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+        <Label x:Name="labelOperator" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="buttonPlus" Content="+" Width="30" Margin="20" Click="buttonPlus_Click"/>
+            <Button x:Name="buttonMinus" Content="-" Width="30" Margin="20" Click="buttonMinus_Click"/>
+            <Button x:Name="buttonMultiplication" Content="*" Width="30" Margin="20" Click="buttonMultiplication_Click"/>
+            <Button x:Name="buttonDivision" Content="/" Width="30" Margin="20" Click="buttonDivision_Click"/>
+            <Button x:Name="buttonDivision2" Content="%" Width="30" Margin="20" Click="buttonDivision2_Click"/>
+        </StackPanel>
+        <Label x:Name="labelNumber" Grid.Row="2" Content="0" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+    </Grid>
+</Window>
